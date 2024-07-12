@@ -32,7 +32,7 @@ const Home = () => {
         setEmail("");
       } else {
         // toast.error(data.error || "Failed to set price tracker");
-        console.log("failed to set price tracker");
+        console.log("failed to  set price tracker");
       }
     } catch (error) {
       console.error("Failed to track price:", error);
