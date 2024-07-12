@@ -9,10 +9,7 @@ export const connectDB = async (): Promise<void> => {
   }
 
   try {
-    await mongoose.connect(MONGODB_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(MONGODB_URL);
     console.log("Connected to MongoDB");
   } catch (error: any) {
     console.error("Error connecting to MongoDB:", error);

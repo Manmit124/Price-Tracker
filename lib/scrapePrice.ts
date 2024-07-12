@@ -7,7 +7,7 @@ const scrapePrice = async (url: string): Promise<string | null> => {
   await page.goto(url);
 
   const price = await page.evaluate(() => {
-    const priceElement = document.querySelector(".Nx9bqj.CxhGGd"); // Make sure the selector is correct
+    const priceElement = document.querySelector(".Nx9bqj.CxhGGd") as HTMLElement ; // Make sure the selector is correct
     return priceElement ? priceElement.innerText : null;
   });
 console.log("run")
