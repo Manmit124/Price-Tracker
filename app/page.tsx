@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 // import { toast } from "react-hot-toast";
-
+export const runtime="edge";
 const Home = () => {
   const [url, setUrl] = useState("");
   const [targetPrice, setTargetPrice] = useState("");
