@@ -29,7 +29,7 @@ const scrapePrice = async (url: string): Promise<string | null> => {
   try {
     if (process.env.NODE_ENV === "production") {
       const puppeteer = await import("puppeteer-core");
-      const chromium = await import("@sparticuz/chromium");
+      const chromium = await import("@sparticuz/chromium-min");
 
       browser = await puppeteer.launch({
         args: chromium.default.args,
