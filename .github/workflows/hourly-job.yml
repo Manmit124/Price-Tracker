@@ -1,0 +1,12 @@
+name: Hourly Trigger Vercel API
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs at the top of every hour
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Call Vercel API Endpoint
+      run: curl -s https://price-tracker-henna-seven.vercel.app/api/cron
